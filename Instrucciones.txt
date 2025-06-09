@@ -1,0 +1,19 @@
+1. Instalar Python (si no está instalado)
+Descargue e instale Python 3.8 o superior desde python.org.
+
+2.  Clone o copiar el proyecto
+Nuestro proyecto lo trabajamos en un repositorio en github, para clonarlo abra la terminal y ejecute:
+
+    git clone https://github.com/Wen100/ProyectoFinal_INE135.git
+
+Si no quiere clonar el repositorio, puede solo descomprimir el archivo .zip
+
+3. Instale las siguientes dependencias para poder ejecutar el programa:
+
+    pip install -r requirements.txt
+
+4. Ejecute el proyecto con el siguiente comando:
+
+    python -m streamlit run "ProyectoFinal_INE135/main.py"
+
+    Esto abrirá en el navegador la app con la URL local (normalmente http://localhost:8501).
