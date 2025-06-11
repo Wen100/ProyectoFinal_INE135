@@ -117,7 +117,7 @@ uso_total = sum(uso_anual)
 if st.button("📊 Calcular Depreciaciones"):
     metodos = {
         "Línea Recta": linea_recta(costo, residual, vida),
-        "Saldo Decreciente": saldo_decreciente(costo, vida),
+        "Saldo Decreciente": saldo_decreciente(costo, residual, vida),
         "Suma Dígitos": suma_digitos(costo, residual, vida),
         "Unidad Producción": unidad_produccion(costo, residual, uso_anual, uso_total)
     }

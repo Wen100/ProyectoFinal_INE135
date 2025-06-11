@@ -5,14 +5,24 @@ def linea_recta(costo, residual, vida):
     anual = (costo - residual) / vida
     return [round(anual, 2)] * int(vida)
 
-def saldo_decreciente(costo, vida):
+def saldo_decreciente(costo, residual, vida):
     tasa = 2 / vida
     valores = []
     actual = costo
     for _ in range(int(vida)):
         dep = round(actual * tasa, 2)
+
+        if actual - dep < residual:
+            dep = round (actual - residual, 2)
+
         valores.append(dep)
         actual -= dep
+
+        if actual <= residual:
+            break
+    while len (valores) < int (vida):
+            valores.append(0.00)
+
     return valores
 
 def suma_digitos(costo, residual, vida):
